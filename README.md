@@ -1,4 +1,12 @@
 #Alterações feitas nos agente
+Foi feita a alteração no número de tentativas
+Foi feita támbem uma adição de dicas para deixar o jogo mais fácil para o usuário 
+
+
+
+
+
+
 
 class GameAgent:
     def __init__(self, secret_number, max_attempts=10):
