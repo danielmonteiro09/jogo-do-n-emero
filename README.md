@@ -1,7 +1,3 @@
-#Alterações feitas nos agente
-#Foi feita a alteração no número de tentativas
-#Foi feita támbem uma adição de dicas para deixar o jogo mais fácil para o usuário 
-
 class GameAgent:
     def __init__(self, secret_number, max_attempts=10):
         self.secret_number = secret_number
@@ -32,3 +28,10 @@ class GameAgent:
         else:
             self.state = "Tentativa errada"
             return "O número é um número composto"
+
+# Criando um agente com um número secreto entre 1 a 70
+agent = GameAgent(secret_number=random.randint(1, 70))
+
+while agent.state not in ["Acertou!", "Fim do jogo"]:
+    guess = int(input("Digite um número: "))
+    print(agent.make_guess(guess))
